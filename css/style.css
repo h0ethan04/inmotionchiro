@@ -17,8 +17,8 @@ body {
 .header {
     background: url(../assets/chiro_background.jpg) no-repeat center center; 
     background-size: cover;
-    height: 720px;
-    text-align: left; 
+    height: 800px;
+    text-align: right; 
 }
 
 .header .container {
