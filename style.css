@@ -1,0 +1,22 @@
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+  }
+  
+  .container {
+    margin: 0 auto;
+    max-width: 940px; 
+    padding: 0 10px;
+  }
+  
+  .header {
+    background: url(assets/chiro_background.jpg) no-repeat center center; 
+    background-size: cover;
+    height: 800px;
+    text-align: center; 
+  }
