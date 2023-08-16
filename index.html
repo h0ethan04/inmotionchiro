@@ -7,11 +7,48 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
+
+
 <body>
+    <script>
+        var smoothScroll = function(elementId) {
+        var MIN_PIXELS_PER_STEP = 16;
+        var MAX_SCROLL_STEPS = 30;
+        var target = document.getElementById(elementId);
+        var scrollContainer = target;
+        do {
+            scrollContainer = scrollContainer.parentNode;
+            if (!scrollContainer) return;
+            scrollContainer.scrollTop += 1;
+        } while (scrollContainer.scrollTop == 0);
+
+        var targetY = 0;
+        do {
+            if (target == scrollContainer) break;
+            targetY += target.offsetTop;
+        } while (target = target.offsetParent);
+
+        var pixelsPerStep = Math.max(MIN_PIXELS_PER_STEP,
+                                    (targetY - scrollContainer.scrollTop) / MAX_SCROLL_STEPS);
+
+        var stepFunc = function() {
+            scrollContainer.scrollTop =
+                Math.min(targetY, pixelsPerStep + scrollContainer.scrollTop);
+
+            if (scrollContainer.scrollTop >= targetY) {
+                return;
+            }
+
+            window.requestAnimationFrame(stepFunc);
+        };
+
+        window.requestAnimationFrame(stepFunc);
+        }
+    </script>
     <div class="nav">
         <div class="container">
             <ul>
-                <li>Locations</li>
+                <li onclick="smoothScroll('directions')">Locations</li>
                 <li>About</li>
                 <li>Contact</li>
             </ul>
@@ -27,8 +64,9 @@
     </div>
     
     <div class="location">
-        <div class="map">
-            <h3>6540 Stockton Blvd Ste 2, Sacramento, CA 95823</h3>
+        <div class="map" id="directions">
+            <h3>6540 Stockton Blvd Ste 2, Sacramento, CA 95823 <br> <br> Open Monday Through Friday <br> 9am-5pm</h3> 
+            <!-- <h3></h3> -->
             <iframe class="directions" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3122.153599407922!2d-121.43780752363027!3d38.507168269634285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac556a7b53db5%3A0xdd63a88c0549d9e9!2sIn%20Motion%20Chiropractic!5e0!3m2!1sen!2sus!4v1692163022152!5m2!1sen!2sus" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
