@@ -10,14 +10,14 @@ body {
   
 .container {
     margin: 0 auto;
-    max-width: 940px; 
+    max-width: 1400px; 
     padding: 0 10px;
 }
   
 .header {
     background: url(../assets/spine.jpg) no-repeat center center; 
     background-size: cover;
-    height: 800px;
+    height: 900px;
     text-align: right; 
 }
 
