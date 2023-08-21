@@ -13,46 +13,101 @@
 <body>
     <script>
         var smoothScroll = function(elementId) {
-        var MIN_PIXELS_PER_STEP = 16;
-        var MAX_SCROLL_STEPS = 30;
-        var target = document.getElementById(elementId);
-        var scrollContainer = target;
-        do {
-            scrollContainer = scrollContainer.parentNode;
-            if (!scrollContainer) return;
-            scrollContainer.scrollTop += 1;
-        } while (scrollContainer.scrollTop == 0);
+            var MIN_PIXELS_PER_STEP = 16;
+            var MAX_SCROLL_STEPS = 30;
+            var target = document.getElementById(elementId);
+            var scrollContainer = target;
+            do {
+                scrollContainer = scrollContainer.parentNode;
+                if (!scrollContainer) return;
+                scrollContainer.scrollTop += 1;
+            } while (scrollContainer.scrollTop == 0);
 
-        var targetY = 0;
-        do {
-            if (target == scrollContainer) break;
-            targetY += target.offsetTop;
-        } while (target = target.offsetParent);
+            var targetY = 0;
+            do {
+                if (target == scrollContainer) break;
+                targetY += target.offsetTop;
+            } while (target = target.offsetParent);
 
-        var pixelsPerStep = Math.max(MIN_PIXELS_PER_STEP,
-                                    (targetY - scrollContainer.scrollTop) / MAX_SCROLL_STEPS);
+            var pixelsPerStep = Math.max(MIN_PIXELS_PER_STEP,
+                                        (targetY - scrollContainer.scrollTop) / MAX_SCROLL_STEPS);
 
-        var stepFunc = function() {
-            scrollContainer.scrollTop =
-                Math.min(targetY, pixelsPerStep + scrollContainer.scrollTop);
+            var stepFunc = function() {
+                scrollContainer.scrollTop =
+                    Math.min(targetY, pixelsPerStep + scrollContainer.scrollTop);
 
-            if (scrollContainer.scrollTop >= targetY) {
-                return;
-            }
+                if (scrollContainer.scrollTop >= targetY) {
+                    return;
+                }
+
+                window.requestAnimationFrame(stepFunc);
+            };
 
             window.requestAnimationFrame(stepFunc);
-        };
-
-        window.requestAnimationFrame(stepFunc);
         }
+    </script>
+
+    <script>
+        function keyOrClick(event){
+            if(event.type === 'click'){
+                return true;
+            }
+            else if(event.type === 'keypress'){
+                var code = event.charCode || event.keyCode;
+                if((code === 32)|| (code === 13)){
+                    return true;
+                }
+            }
+            else{
+                return false;
+            }
+        }
+
+        var smoothScrollKey = function(event, elementId) {
+            if (!keyOrClick(event)) {
+                return;
+            }
+            var MIN_PIXELS_PER_STEP = 16;
+            var MAX_SCROLL_STEPS = 30;
+            var target = document.getElementById(elementId);
+            var scrollContainer = target;
+            do {
+                scrollContainer = scrollContainer.parentNode;
+                if (!scrollContainer) return;
+                scrollContainer.scrollTop += 1;
+            } while (scrollContainer.scrollTop == 0);
+
+            var targetY = 0;
+            do {
+                if (target == scrollContainer) break;
+                targetY += target.offsetTop;
+            } while (target = target.offsetParent);
+
+            var pixelsPerStep = Math.max(MIN_PIXELS_PER_STEP,
+                                        (targetY - scrollContainer.scrollTop) / MAX_SCROLL_STEPS);
+
+            var stepFunc = function() {
+                scrollContainer.scrollTop =
+                    Math.min(targetY, pixelsPerStep + scrollContainer.scrollTop);
+
+                if (scrollContainer.scrollTop >= targetY) {
+                    return;
+                }
+
+                window.requestAnimationFrame(stepFunc);
+            };
+
+            window.requestAnimationFrame(stepFunc);
+        }
+
     </script>
 
     <div class="nav" role="navigation">
         <div class="container">
             <ul>
-                <li tabindex="1" onclick="smoothScroll('directions')">Locations</li>
+                <li tabindex="1" onclick="smoothScroll('directions')" onkeypress="smoothScrollKey(event, 'directions')">Locations</li>
                 <li tabindex="1">About</li>
-                <li tabindex="1" onclick="smoothScroll('contact')">Contact</li>
+                <li tabindex="1" onclick="smoothScroll('contact')" onkeypress="smoothScrollKey(event, 'contact')">Contact</li>
             </ul>
         </div>
     </div>
@@ -66,7 +121,7 @@
     </div>
 
     <div class="contact" role="contact">
-        <div class="container">
+        <div class="container" id="contact">
             <h2>Walk-in's welcome!</h2>
             <h2>To schedule an appointment, call (916) 421-5915</h2>
         </div>
