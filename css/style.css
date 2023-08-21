@@ -96,7 +96,7 @@ h3 {
 
 .contact {
   background:rgb(20, 20, 20);
-  height: 300px;
+  height: 250px;
   width: 100%;
   display: flex;
   padding-top: 5%;
@@ -105,10 +105,10 @@ h3 {
 .contact h2 {
   color: #fff;
   font-weight: 500;
-  font-size: 25px;
-  letter-spacing: 3px;
-  height: 80px;
-  line-height: 40px; 
+  font-size: 28px;
+  letter-spacing: 2px;
+  height: 75px;
+  line-height: 25x; 
 }
 
 .map {
