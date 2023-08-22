@@ -99,7 +99,7 @@ h3 {
 .nav ul li {
   color: #fff;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 4vw;
   letter-spacing: 3px;
   display: inline-block; 
   /* flex-wrap: nowrap; */
@@ -150,10 +150,10 @@ h3 {
 
 .map h3 {
   width: 20em;
-  font-size: 2.25vw;
+  font-size: 3vw;
   margin-left: 1vw;
-  letter-spacing: 0.5vh;
-  line-height: 2.5vw;
+  letter-spacing: 0.75vw;
+  line-height: 3vh;
   margin-top: 1.25vw;
   text-align: end;
 }
@@ -188,11 +188,11 @@ h3 {
 
 .footer {
   background:rgb(20, 20, 20);
-  height: 100%;
-  min-height: 50px;
+  height: 20vh;
+  min-height: 3vh;
   width: 100%;
   display: flex;
-  padding-top: 1%;
+  padding-top: 1vh;
   flex: 1 1 auto;
 }
 
@@ -201,27 +201,29 @@ h3 {
   margin-left: 5%;
   color: #fff;
   font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 1px;
-  height: 10px;
-  line-height: 1%px; 
+  font-size: 2.5vw;
+  letter-spacing: 0.1vw;
+  height: 20vh;
+  line-height: 3vh; 
   text-transform: none;
+
 }
 
 .footer .container {
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
+
 }
 
 
 .credits {
   background:rgb(20, 20, 20);
-  height: 100%;
-  min-height: 100px;
+  height: 20vh;
+  min-height: 15vh;
   width: 100%;
   display: flex;
-  padding-top: 1%;
+  padding-top: 1vh;
   flex: 1 1 auto;
 }
 
@@ -235,8 +237,8 @@ h3 {
   letter-spacing: 1px;
   text-transform: none;
   display: inline-block; 
-  height: 10px;
-  line-height: 1%px; 
+  height: 15vh;
+  line-height: 3vh; 
 }
 
 .credits h3 a {
