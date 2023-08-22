@@ -86,7 +86,7 @@ h3 {
 .nav { 
   background: #000;
   height: max(6vw, 6vh); 
-  padding-top: 1vh;
+  padding-top: 0.5vh;
   width: 100%;
 }
 
