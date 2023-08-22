@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
+    
 <head>
     <title>In Motion Chiropractic</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,100' rel='stylesheet' type='text/css'>
     <link href="css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 
@@ -105,9 +106,9 @@
     <div class="nav" role="navigation">
         <div class="container">
             <ul>
-                <li tabindex="1">About</li>
-                <li tabindex="1" onclick="smoothScroll('contact')" onkeypress="smoothScrollKey(event, 'contact')">Contact</li>
-                <li tabindex="1" onclick="smoothScroll('directions')" onkeypress="smoothScrollKey(event, 'directions')">Locations</li>
+                <li tabindex="0" >About</li>
+                <li tabindex="0" onclick="smoothScroll('contact')" onkeypress="smoothScrollKey(event, 'contact')">Contact</li>
+                <li tabindex="0" onclick="smoothScroll('directions')" onkeypress="smoothScrollKey(event, 'directions')">Locations</li>
             </ul>
         </div>
     </div>
@@ -120,15 +121,15 @@
         </div>
     </div>
 
-    <div class="contact" role="contact">
-        <div class="container" id="contact">
+    <div class="contact" role="contact" id="contact">
+        <div class="container" >
             <h2>Walk-in's welcome!</h2>
             <h2>To schedule an appointment, call (916) 421-5915</h2>
         </div>
     </div>
 
-    <div class="location">
-        <div class="map" id="directions">
+    <div class="location" role="directions" id="directions">
+        <div class="map">
             <h3>6540 Stockton Blvd Ste 2, <br> Sacramento, CA 95823 <br> <br> Open Mon - Fri 9am-5pm, <br> Sat 9am-12pm <br> Closed Sundays</h3>
             <iframe tabindex="0" class="directions" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3122.153599407922!2d-121.43780752363027!3d38.507168269634285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac556a7b53db5%3A0xdd63a88c0549d9e9!2sIn%20Motion%20Chiropractic!5e0!3m2!1sen!2sus!4v1692163022152!5m2!1sen!2sus" width="400" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
