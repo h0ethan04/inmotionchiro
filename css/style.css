@@ -1,9 +1,14 @@
 html, body {
     margin: 0;
     padding: 0;
-
 }
   
+/* * {
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+} */
+
 html {
   height: 100%;
   width: 100%;
@@ -26,15 +31,15 @@ body {
 .header {
     background: linear-gradient(to bottom, rgba(18, 46, 202, 0.52), rgba(7, 49, 104, 0.73)), url(../assets/spine.jpg) no-repeat center center; 
     background-size: cover;
-    height: 600px;
+    height: 100vh;
     text-align: right; 
     display: flex;
 }
 
 .header .container {
     position: relative;
-    top: 200px;
-
+    top: 25vh;
+    height: 75vh;
     display: flex;
     flex: 1 1 auto;
     flex-direction: column;
@@ -42,11 +47,21 @@ body {
 
 .header h1 {
   color: #fff;
-  line-height: 30px; 
-  font-size: 80px;
+  line-height: 8vw; 
+  font-size: 8vw;
   margin-top: 0;
-  margin-left: 10%;
-  margin-bottom: 10%;
+
+  margin-bottom: 5%;
+  text-transform: uppercase; 
+}
+
+.header h2 {
+  color: #fff;
+  font-size: 3vw;
+  font-weight: 600;
+  letter-spacing: 0.1vw;
+  margin-bottom: 0.5vh;
+  margin-top: 1vh;
   text-transform: uppercase; 
 }
 
@@ -61,21 +76,12 @@ h3 {
   text-transform: uppercase;
 }
 
-@media (min-width:850px) {
+@media (min-width:8vw) {
   .header h1 {
-    font-size: 100px;
+    font-size: 8vw;
   }
 }
 
-.header h2 {
-  color: #fff;
-  font-size: 30px;
-  font-weight: 600;
-  letter-spacing: 14px;
-  margin-bottom: 40px;
-  margin-top: 0px;
-  text-transform: uppercase; 
-}
 
 .nav { 
   background: #000;
@@ -112,24 +118,31 @@ h3 {
 
 .contact {
   background:rgb(20, 20, 20);
-  height: 250px;
+  height: 40vh;
   width: 100%;
   display: flex;
-  padding-top: 5%;
+  padding-top: 10vh;
+}
+
+.contact .container {
+  flex: 1 1 auto;
+  position: relative;
+  height: 35vh;
 }
 
 .contact h2 {
   color: #fff;
   font-weight: 500;
-  font-size: 28px;
-  letter-spacing: 2px;
-  height: 75px;
-  line-height: 25x; 
+  font-size: 4vh;
+  letter-spacing: 0.2vw;
+  height: 12vh;
+  line-height: 5vh; 
+  text-align: center;
 }
 
 .map {
   background: rgb(5, 57, 117);
-  height: 600px; 
+  height: 60vh; 
   width: 100%;
   display: flex;
   padding-top: 5%;
@@ -137,10 +150,12 @@ h3 {
 
 .map h3 {
   width: 20em;
-  font-size: 24px;
-  margin-left: 20px;
-  margin-top: 5%;
-  text-align: right;
+  font-size: 2.25vw;
+  margin-left: 1vw;
+  letter-spacing: 0.5vh;
+  line-height: 2.5vw;
+  margin-top: 1.25vw;
+  text-align: end;
 }
 
 .map > div {
@@ -149,6 +164,11 @@ h3 {
 
 .map * {
   box-sizing: border-box;
+}
+
+.map iframe {
+  width: 50vw;
+  height: 50vh;
 }
 
 .preview {
@@ -225,6 +245,6 @@ h3 {
 
 .credits .container {
   display: flex;
-  flex: 1 0 auto;
+  flex: 1 1 auto;
   flex-direction: column;
 }
