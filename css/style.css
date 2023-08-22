@@ -84,7 +84,7 @@ h3 {
   height: 80px;
   line-height: 80px; 
   list-style: none;
-  padding: 0 10px;
+  padding: 0 30px;
   transition: background .5s; 
 }
 
@@ -152,10 +152,12 @@ h3 {
 
 .footer {
   background:rgb(20, 20, 20);
-  height: 100px;
+  height: 100%;
+  min-height: 50px;
   width: 100%;
   display: flex;
   padding-top: 1%;
+  flex: 1 1 auto;
 }
 
 .footer h3 {
@@ -163,13 +165,50 @@ h3 {
   margin-left: 5%;
   color: #fff;
   font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  height: 10px;
+  line-height: 1%px; 
+  text-transform: none;
+}
+
+.footer .container {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+
+.credits {
+  background:rgb(20, 20, 20);
+  height: 100%;
+  min-height: 75px;
+  width: 100%;
+  display: flex;
+  padding-top: 1%;
+  flex: 1 1 auto;
+}
+
+.credits h3 {
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-bottom: 2%;
+  color: #fff;
+  font-weight: 500;
   font-size: 12px;
   letter-spacing: 1px;
+  text-transform: none;
   display: inline-block; 
   height: 10px;
   line-height: 1%px; 
 }
 
-.footer h3 a {
+.credits h3 a {
   color: #fff;
+}
+
+.credits .container {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
 }
