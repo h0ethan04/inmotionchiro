@@ -58,7 +58,7 @@ body {
 
 .header h2 {
   color: #fff;
-  font-size: 3vw;
+  font-size: min(3vw, 6vh);
   font-weight: 600;
   letter-spacing: 0.1vw;
   margin-bottom: 0.5vh;
@@ -79,7 +79,7 @@ h3 {
 
 @media (min-width:8vw) {
   .header h1 {
-    font-size: 8vw;
+    font-size: min(8vw, 16vh);
   }
 }
 
@@ -151,7 +151,7 @@ h3 {
 }
 
 .map h3 {
-  font-size: 2.5vw;
+  font-size: min(4vh, max(2.5vw, 2.5vh));
   margin-left: 1vw;
   letter-spacing: 0.25vw;
   line-height: min(5vh, max(4vh, 3.5vw));
