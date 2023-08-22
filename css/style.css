@@ -10,7 +10,7 @@ body {
   
 .container {
     margin: 0 auto;
-    max-width: 1400px; 
+    /* max-width: 1400px;  */
     padding: 0 10px;
 }
   
@@ -31,7 +31,8 @@ body {
   line-height: 30px; 
   font-size: 80px;
   margin-top: 0;
-  margin-bottom: 80px;
+  margin-left: 10%;
+  margin-bottom: 10%;
   text-transform: uppercase; 
 }
 
