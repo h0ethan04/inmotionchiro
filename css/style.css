@@ -150,11 +150,10 @@ h3 {
 }
 
 .map h3 {
-  /* width: 20em; */
   font-size: 2.5vw;
   margin-left: 1vw;
   letter-spacing: 0.25vw;
-  line-height: 3vw;
+  line-height: min(5vh, max(4vh, 3.5vw));
   margin-top: 1.25vw;
   text-align: end;
 }
@@ -239,7 +238,7 @@ h3 {
   text-transform: none;
   display: inline-block; 
   height: 10vh;
-  line-height: 2vh; 
+  line-height: min(2vw, max(4vh, 3vw)); 
 }
 
 .credits h3 a {
